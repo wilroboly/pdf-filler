@@ -9,6 +9,7 @@ gem 'prawn', "0.12.0"
 gem 'json', "2.1.0"
 gem 'markdown', "1.1.1"
 gem 'eventmachine', "1.2.5"
+gem 'bigdecimal', "1.3.2"
 
 group :development, :test do
   gem 'pry', "0.9.12.2"
