@@ -123,14 +123,14 @@ Examples
 * [Generated HTML Form](/form?pdf=http://help.adobe.com/en_US/Acrobat/9.0/Samples/interactiveform_enabled.pdf)
 
 ### UD100 AcroForm
-* [Form](http://dev.forms-workstream.online/templates/ud100.pdf)
-* [Fields](/fields?pdf=http://dev.forms-workstream.online/templates/ud100.pdf)
-* [Generated HTML Form](/form?pdf=http://dev.forms-workstream.online/templates/ud100.pdf)
+* [Form](/templates/ud100.pdf)
+* [Fields](/fields?pdf=https://github.com/jluckyiv/pdf-filler/raw/master/public/templates/ud100.pdf)
+* [Generated HTML Form](/form?pdf=https://github.com/jluckyiv/pdf-filler/raw/master/public/templates/ud100.pdf)
 
 ### SC100 XFA Form
-* [Form](http://dev.forms-workstream.online/templates/sc100.pdf)
-* [Fields](/fields?pdf=http://dev.forms-workstream.online/templates/sc100.pdf)
-* [Generated HTML Form](/form?pdf=http://dev.forms-workstream.online/templates/sc100.pdf)
+* [Form](/templates/sc100.pdf)
+* [Fields](/fields?pdf=https://github.com/jluckyiv/pdf-filler/raw/master/public/templates/sc100.pdf)
+* [Generated HTML Form](/form?pdf=https://github.com/jluckyiv/pdf-filler/raw/master/public/templates/sc100.pdf)
 
 Contributing
 ------------
