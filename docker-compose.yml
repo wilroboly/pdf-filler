@@ -5,9 +5,9 @@ web:
   volumes:
     - .:/usr/app
   ports:
-    - '80:4567'
+    - '4567:4567'
   environment:
     - PATH_TO_PDFTK=/usr/bin/pdftk
+    - VIRTUAL_HOST=dev.forms-workstream.online
   restart: always
-  # command: bundle exec thin start -p 4567
   command: bundle exec thin start -p 4567
