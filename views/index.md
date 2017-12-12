@@ -117,12 +117,20 @@ The app is designed to be hosted on hosting services like heroku. If using Herok
 Examples
 --------
 
-* [Adobe Sample Acroform](http://help.adobe.com/en_US/Acrobat/9.0/Samples/interactiveform_enabled.pdf)
-* [Fields for Adobe Sample Acroform](/fields?pdf=http://help.adobe.com/en_US/Acrobat/9.0/Samples/interactiveform_enabled.pdf)
-* [Generated HTML Form for Adobe Sample Acroform](/form?pdf=http://help.adobe.com/en_US/Acrobat/9.0/Samples/interactiveform_enabled.pdf)
-* [UD100](http://dev.forms-workstream.online/templates/ud100.pdf)
-* [Fields for UD100](/fields?pdf=http://dev.forms-workstream.online/templates/ud100.pdf)
-* [Generated HTML Form for UD100](/form?pdf=http://dev.forms-workstream.online/templates/ud100.pdf)
+### Adobe Sample AcroForm
+* [Form](http://help.adobe.com/en_US/Acrobat/9.0/Samples/interactiveform_enabled.pdf)
+* [Fields](/fields?pdf=http://help.adobe.com/en_US/Acrobat/9.0/Samples/interactiveform_enabled.pdf)
+* [Generated HTML Form](/form?pdf=http://help.adobe.com/en_US/Acrobat/9.0/Samples/interactiveform_enabled.pdf)
+
+### UD100 AcroForm
+* [Form](http://dev.forms-workstream.online/templates/ud100.pdf)
+* [Fields](/fields?pdf=http://dev.forms-workstream.online/templates/ud100.pdf)
+* [Generated HTML Form](/form?pdf=http://dev.forms-workstream.online/templates/ud100.pdf)
+
+### SC100 XFA Form
+* [Form](http://dev.forms-workstream.online/templates/sc100.pdf)
+* [Fields](/fields?pdf=http://dev.forms-workstream.online/templates/sc100.pdf)
+* [Generated HTML Form](/form?pdf=http://dev.forms-workstream.online/templates/sc100.pdf)
 
 Contributing
 ------------
