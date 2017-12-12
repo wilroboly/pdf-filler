@@ -2,6 +2,8 @@
 web:
   build: .
   working_dir: /usr/app
+  volumes:
+    - .:/usr/app
   ports:
     - '80:4567'
   environment:
