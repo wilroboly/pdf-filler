@@ -9,9 +9,10 @@ require File.dirname(__FILE__) + "/lib/pdf_filler.rb"
 
 set :root, File.dirname(__FILE__)
 set :views, File.dirname(__FILE__) + "/views"
+set :public_folder, 'public'
 
 # documentation
-get '/' do 
+get '/' do
   markdown :index, :layout => :bootstrap, :layout_engine => :liquid
 end
 
