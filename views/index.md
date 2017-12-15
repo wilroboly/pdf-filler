@@ -118,19 +118,19 @@ Examples
 --------
 
 ### Adobe Sample AcroForm
-* [Form](http://help.adobe.com/en_US/Acrobat/9.0/Samples/interactiveform_enabled.pdf)
-* [Fields](/fields?pdf=http://help.adobe.com/en_US/Acrobat/9.0/Samples/interactiveform_enabled.pdf)
-* [Generated HTML Form](/form?pdf=http://help.adobe.com/en_US/Acrobat/9.0/Samples/interactiveform_enabled.pdf)
+* [Form](https://forms.forms-workstream.online/templates/sample.pdf)
+* [Fields](/fields?pdf=https://forms.forms-workstream.online/templates/sample.pdf)
+* [Generated HTML Form](/form?pdf=https://forms.forms-workstream.online/templates/sample.pdf)
 
 ### UD100 AcroForm
-* [Form](/templates/ud100.pdf)
-* [Fields](/fields?pdf=https://github.com/jluckyiv/pdf-filler/raw/master/public/templates/ud100.pdf)
-* [Generated HTML Form](/form?pdf=https://github.com/jluckyiv/pdf-filler/raw/master/public/templates/ud100.pdf)
+* [Form](https://forms.forms-workstream.online/templates/ud100.pdf)
+* [Fields](/fields?pdf=https://forms.forms-workstream.online/templates/ud100.pdf)
+* [Generated HTML Form](/form?pdf=https://forms.forms-workstream.online/templates/ud100.pdf)
 
 ### SC100 XFA Form
-* [Form](/templates/sc100.pdf)
-* [Fields](/fields?pdf=https://github.com/jluckyiv/pdf-filler/raw/master/public/templates/sc100.pdf)
-* [Generated HTML Form](/form?pdf=https://github.com/jluckyiv/pdf-filler/raw/master/public/templates/sc100.pdf)
+* [Form](https://forms.forms-workstream.online/templates/sc100.pdf)
+* [Fields](/fields?pdf=https://forms.forms-workstream.online/templates/sc100.pdf)
+* [Generated HTML Form](/form?pdf=https://forms.forms-workstream.online/templates/sc100.pdf)
 
 Contributing
 ------------
