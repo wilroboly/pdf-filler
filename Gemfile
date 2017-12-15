@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 
 gem 'rake', "10.1.0"
-gem 'sinatra', "1.4.6"
+gem 'sinatra', "1.4.3"
 gem 'thin', "1.5.1"
 gem 'liquid', "2.5.0"
 gem 'pdf-forms', "0.5.5"
