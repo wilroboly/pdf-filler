@@ -4,10 +4,13 @@ web:
   working_dir: /usr/app
   volumes:
     - .:/usr/app
-  ports:
-    - '4567:4567'
   environment:
     - PATH_TO_PDFTK=/usr/bin/pdftk
-    - VIRTUAL_HOST=dev.forms-workstream.online
+    - "VIRTUAL_HOST=${VIRTUAL_HOST}"
+    - "LETSENCRYPT_HOST=${VIRTUAL_HOST}"
+    - "LETSENCRYPT_EMAIL=${EMAIL}"
+  expose:
+    - '4567'
+  network_mode: bridge
   restart: always
   command: bundle exec thin start -p 4567
