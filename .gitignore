@@ -2,3 +2,4 @@
 .rspec
 coverage/*
 .tool-versions-e
+.env
