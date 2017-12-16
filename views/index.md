@@ -118,19 +118,19 @@ Examples
 --------
 
 ### Adobe Sample AcroForm
-* [Form](https://forms.forms-workstream.online/templates/sample.pdf)
-* [Fields](/fields?pdf=https://forms.forms-workstream.online/templates/sample.pdf)
-* [Generated HTML Form](/form?pdf=https://forms.forms-workstream.online/templates/sample.pdf)
+* [Form](https://forms-workstream.online/templates/sample.pdf)
+* [Fields](/fields?pdf=https://forms-workstream.online/templates/sample.pdf)
+* [Generated HTML Form](/form?pdf=https://forms-workstream.online/templates/sample.pdf)
 
 ### UD100 AcroForm
-* [Form](https://forms.forms-workstream.online/templates/ud100.pdf)
-* [Fields](/fields?pdf=https://forms.forms-workstream.online/templates/ud100.pdf)
-* [Generated HTML Form](/form?pdf=https://forms.forms-workstream.online/templates/ud100.pdf)
+* [Form](https://forms-workstream.online/templates/ud100.pdf)
+* [Fields](/fields?pdf=https://forms-workstream.online/templates/ud100.pdf)
+* [Generated HTML Form](/form?pdf=https://forms-workstream.online/templates/ud100.pdf)
 
 ### SC100 XFA Form
-* [Form](https://forms.forms-workstream.online/templates/sc100.pdf)
-* [Fields](/fields?pdf=https://forms.forms-workstream.online/templates/sc100.pdf)
-* [Generated HTML Form](/form?pdf=https://forms.forms-workstream.online/templates/sc100.pdf)
+* [Form](https://forms-workstream.online/templates/sc100.pdf)
+* [Fields](/fields?pdf=https://forms-workstream.online/templates/sc100.pdf)
+* [Generated HTML Form](/form?pdf=https://forms-workstream.online/templates/sc100.pdf)
 
 Contributing
 ------------
