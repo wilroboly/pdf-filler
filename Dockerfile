@@ -4,8 +4,8 @@ LABEL maintainer Jack Lucky <jack.lucky.iv@gmail.com
 ENV PATH_TO_PDFTK /usr/bin/pdftk
 
 RUN apt-get update && apt-get install -y \
+  ruby \
   bundler \
-  openssl \
   ca-certificates \
   pdftk \
   && rm -rf /var/lib/apt/lists/*
