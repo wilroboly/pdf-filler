@@ -1,5 +1,5 @@
 ---
-version: '2'
+version: '3'
 services:
   web:
     build: .
@@ -13,7 +13,14 @@ services:
       - "LETSENCRYPT_HOST=${VIRTUAL_HOST}"
       - "LETSENCRYPT_EMAIL=${EMAIL}"
     expose:
-      - '4567'
+      - '${PORT}'
     network_mode: bridge
     restart: always
-    command: bundle exec thin start -p 4567
+    command: bundle exec thin start -p ${PORT}
+    # Don't forget to add a .env with all the variables used in this file.
+    env_file:
+     - .env
+    extra_hosts:
+     - "${HOSTNAME}:${HOSTIP}"
+    ports:
+     - "${VIRTUAL_HOST}:${PORT}:${PORT}"
