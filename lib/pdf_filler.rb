@@ -48,6 +48,7 @@ class PdfFiller
         pdf.draw_text value, :at => [ at[ :x ].to_i, at[:y].to_i ]
       end
     end
+
     filled_pdf
   end
   
@@ -55,7 +56,8 @@ class PdfFiller
   def get_fields(url)
     #note: we're talking to PDFTK directly here
     # the native @pdftk.get_field_names doesn't seem to work on many government PDFs
-    fields = @pdftk.call_pdftk( open( URI.escape( url ) ).path, 'dump_data_fields' )
+    source_pdf = open( URI.escape( url ) )
+    fields = @pdftk.call_pdftk(source_pdf.path, 'dump_data_fields')
     fields = fields.split("---")
     @output = []
     fields.each do |field|

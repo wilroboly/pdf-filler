@@ -1,11 +1,26 @@
 ---
-web:
-  build: .
-  working_dir: /usr/app
-  ports:
-    - '80:4567'
-  environment:
-    - PATH_TO_PDFTK=/usr/bin/pdftk
-  restart: always
-  # command: bundle exec thin start -p 4567
-  command: bundle exec thin start -p 4567
+version: '3'
+services:
+  web:
+    build: .
+    container_name: "${VIRTUAL_HOST}"
+    working_dir: /usr/app
+    volumes:
+      - .:/usr/app
+    environment:
+      - PATH_TO_PDFTK=/usr/bin/pdftk
+      - "VIRTUAL_HOST=${VIRTUAL_HOST}"
+      - "LETSENCRYPT_HOST=${VIRTUAL_HOST}"
+      - "LETSENCRYPT_EMAIL=${EMAIL}"
+    expose:
+      - '${PORT}'
+    network_mode: bridge
+    restart: always
+    command: bundle exec thin start -p ${PORT}
+    # Don't forget to add a .env with all the variables used in this file.
+    env_file:
+     - .env
+    extra_hosts:
+     - "${HOSTNAME}:${HOSTIP}"
+    ports:
+     - "${VIRTUAL_HOST}:${PORT}:${PORT}"

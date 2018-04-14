@@ -1,13 +1,16 @@
-PDF Filler
-===========
+PDF Filler (The Docker Edition)
+===============================
 
-PDF Filler is a RESTful service (API) to aid in the completion of existing PDF-based forms and empowers web developers to use browser-based forms and modern web standards to facilitate the collection of information.
+PDF Filler (The Docker Edition) is a containerized RESTful service (API) to aid in the completion of existing PDF-based forms and empowers web developers to use browser-based forms and modern web standards to facilitate the collection of information.
 
 PDF Filler works with virtually any unencrypted PDF, supporting both fillable (e.g., PDFs with pre-defined entry fields) and non-fillable (e.g., scanned PDFs) forms. Simply pass it the URL to any publicly hosted PDF. PDF Filler can even automatically create the markup necessary to embed an HTML form in an existing webpage.
+
+As a Dockered RESTful service, it means it can work seamlessly in any situation, regardless of the environment OS you are using. Its a simple a straight forward implementation and as such, should cause no conflicts with PDFTK which could occur if your OS did not implement its versioned libraries. 
 
 Features
 -------
 
+* Easily configured RESTful service via Docker with docker-compose implementation
 * RESTful service (API) to aid in the completion of PDF-based forms
 * Submit form values via HTTP POST, receive the completed PDF as a download
 * Works with both fillable and non-fillable (e.g., scanned) PDFs
@@ -77,6 +80,33 @@ Data can be submitted programmatically (e.g. via an API) or as a standard web-ba
 
 ```
 
+
+Docker Requirements
+-------------------
+
+* Version of docker 17.04.0 and up
+* Version of Compose file format 3.2 and up
+
+Setting up
+----------
+
+* `docker-compose build` this will acquire and build all the necessary files and apps to get the service running
+* ensure you have your `.env` file setup to match your service configuration
+* `docker-compose up -d` to run the service detached
+
+Example .env file
+-----------------
+```
+VIRTUAL_HOST=127.0.0.1
+EMAIL=web.solution@example.com
+HOSTNAME=example.com
+HOSTIP=10.0.0.0
+PORT=4567
+```
+
+DEPRECATED DOCUMENTATION
+========================
+
 Requirements
 ------------
 
@@ -117,8 +147,20 @@ The app is designed to be hosted on hosting services like heroku. If using Herok
 Examples
 --------
 
-* [Fields](/fields?pdf=http://help.adobe.com/en_US/Acrobat/9.0/Samples/interactiveform_enabled.pdf)
-* [Form](/form?pdf=http://help.adobe.com/en_US/Acrobat/9.0/Samples/interactiveform_enabled.pdf)
+### Adobe Sample AcroForm
+* [Form](https://forms-workstream.online/templates/sample.pdf)
+* [Fields](/fields?pdf=https://forms-workstream.online/templates/sample.pdf)
+* [Generated HTML Form](/form?pdf=https://forms-workstream.online/templates/sample.pdf)
+
+### UD100 AcroForm
+* [Form](https://forms-workstream.online/templates/ud100.pdf)
+* [Fields](/fields?pdf=https://forms-workstream.online/templates/ud100.pdf)
+* [Generated HTML Form](/form?pdf=https://forms-workstream.online/templates/ud100.pdf)
+
+### SC100 XFA Form
+* [Form](https://forms-workstream.online/templates/sc100.pdf)
+* [Fields](/fields?pdf=https://forms-workstream.online/templates/sc100.pdf)
+* [Generated HTML Form](/form?pdf=https://forms-workstream.online/templates/sc100.pdf)
 
 Contributing
 ------------
