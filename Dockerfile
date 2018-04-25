@@ -8,6 +8,7 @@ RUN apt-get update && apt-get install -y \
   bundler \
   ca-certificates \
   pdftk \
+  curl \
   && rm -rf /var/lib/apt/lists/*
 
 RUN mkdir /usr/app
@@ -18,6 +19,11 @@ COPY Gemfile.lock /usr/app/
 RUN bundle install
 
 COPY . /usr/app
+
+RUN useradd -d /usr/app webadm
+RUN chown -R webadm:webadm /usr/app
+USER webadm
+
 VOLUME /usr/app
 
 CMD ruby app.rb -p 4567  -o 0.0.0.0
