@@ -98,9 +98,9 @@ Example .env file
 -----------------
 ```
 VIRTUAL_HOST=127.0.0.1
-EMAIL=web.solution@blood.ca
-HOSTNAME=blood.ca
-HOSTIP=192.168.1.1
+EMAIL=web.solution@example.com
+HOSTNAME=example.com
+HOSTIP=10.0.0.0
 PORT=4567
 ```
 
