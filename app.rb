@@ -11,6 +11,8 @@ set :root, File.dirname(__FILE__)
 set :views, File.dirname(__FILE__) + "/views"
 set :public_folder, 'public'
 
+use Rack::SSL
+
 # documentation
 get '/' do
   markdown :index, :layout => :bootstrap, :layout_engine => :liquid

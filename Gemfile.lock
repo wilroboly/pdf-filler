@@ -41,6 +41,8 @@ GEM
       rack
     rack-test (0.6.2)
       rack (>= 1.0)
+    rack-ssl (1.4.1)
+      rack (>= 0)
     rake (10.1.0)
     rspec (2.14.1)
       rspec-core (~> 2.14.0)
@@ -90,3 +92,4 @@ DEPENDENCIES
   sinatra
   thin
   webrat
+  rack-ssl
