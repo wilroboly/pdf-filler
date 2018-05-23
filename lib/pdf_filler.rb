@@ -1,4 +1,5 @@
 require 'open-uri'
+require 'openssl'
 require 'pdf_forms'
 require 'prawn'
 require 'json'
@@ -30,7 +31,7 @@ class PdfFiller
   # Given a PDF an array of fields -> values
   # return a PDF with the given fields filled out
   def fill( url, data )
-    source_pdf = open( URI.escape( url ) )
+    source_pdf = open( URI.escape( url ),{ssl_verify_mode: OpenSSL::SSL::VERIFY_NONE} )
     step_1_result = Tempfile.new( ['pdf', '.pdf'] )
     filled_pdf = Tempfile.new( ['pdf', '.pdf'] )
     
@@ -56,7 +57,7 @@ class PdfFiller
   def get_fields(url)
     #note: we're talking to PDFTK directly here
     # the native @pdftk.get_field_names doesn't seem to work on many government PDFs
-    source_pdf = open( URI.escape( url ) )
+    source_pdf = open( URI.escape( url ), :ssl_verify_mode => OpenSSL::SSL::VERIFY_NONE )
     fields = @pdftk.call_pdftk(source_pdf.path, 'dump_data_fields')
     fields = fields.split("---")
     @output = []
