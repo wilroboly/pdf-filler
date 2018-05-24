@@ -3,12 +3,14 @@ version: '3'
 services:
   web:
     build: .
-    container_name: "${VIRTUAL_HOST}"
+    container_name: "${PROJECT_NAME}"
     working_dir: /usr/app
     volumes:
       - .:/usr/app
     environment:
       - PATH_TO_PDFTK=/usr/bin/pdftk
+      - PATH_TO_CA_CERTIFICATE=/usr/local/share/ca-certificates
+      - "CA_CERT_NAME=${CERT_FILENAME}"
       - "VIRTUAL_HOST=${VIRTUAL_HOST}"
       - "LETSENCRYPT_HOST=${VIRTUAL_HOST}"
       - "LETSENCRYPT_EMAIL=${EMAIL}"

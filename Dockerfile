@@ -1,11 +1,13 @@
-FROM debian:wheezy-slim
-LABEL maintainer Jack Lucky <jack.lucky.iv@gmail.com
+FROM debian:stretch-slim
+LABEL maintainer William Roboly
 
 ENV PATH_TO_PDFTK /usr/bin/pdftk
+ARG CERT_FILENAME
 
 RUN apt-get update && apt-get install -y \
   ruby \
   bundler \
+  zlib1g-dev \
   ca-certificates \
   pdftk \
   curl \
@@ -13,6 +15,10 @@ RUN apt-get update && apt-get install -y \
 
 RUN mkdir /usr/app
 WORKDIR /usr/app
+
+#TODO: Place this in an ENTRYPOINT script.
+COPY ./ca-certificate/$CERT_FILENAME /usr/local/share/ca-certificates/
+RUN /usr/sbin/update-ca-certificates
 
 COPY Gemfile /usr/app/
 COPY Gemfile.lock /usr/app/
