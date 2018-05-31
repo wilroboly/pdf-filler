@@ -31,7 +31,7 @@ class PdfFiller
   # Given a PDF an array of fields -> values
   # return a PDF with the given fields filled out
   def fill( url, data )
-    source_pdf = open( URI.escape( url ),{ssl_verify_mode: OpenSSL::SSL::VERIFY_NONE} )
+    source_pdf = open( URI.escape( url ) )
     step_1_result = Tempfile.new( ['pdf', '.pdf'] )
     filled_pdf = Tempfile.new( ['pdf', '.pdf'] )
     
