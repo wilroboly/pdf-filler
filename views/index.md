@@ -90,6 +90,15 @@ Docker Requirements
 Setting up
 ----------
 
+Before doing any sort of build, please take the time to update the lines for the certificates. Otherwise the build process will stop.
+
+```
+COPY ca-bundle.crt /usr/local/share/ca-certificates/
+RUN /usr/sbin/update-ca-certificates
+```
+
+It is recommended to replace the ca-bundle.crt file with one of your own.
+
 * `docker-compose build` this will acquire and build all the necessary files and apps to get the service running
 * ensure you have your `.env` file setup to match your service configuration
 * `docker-compose up -d` to run the service detached

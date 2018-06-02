@@ -23,7 +23,7 @@ COPY . /usr/app
 RUN useradd -d /usr/app webadm
 RUN chown -R webadm:webadm /usr/app
 
-COPY ca-bundle.crt /usr/local/share/ca-certificates/
+COPY ./ca-certificate/ca-bundle.crt /usr/local/share/ca-certificates/
 RUN /usr/sbin/update-ca-certificates
 
 USER webadm
